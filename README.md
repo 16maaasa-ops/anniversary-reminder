@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 記念日・誕生日リマインダー
 
-## Getting Started
+家族や友人の誕生日・記念日をまとめて登録しておくと、今日から近い順に並び替え、直近7日以内のものを強調表示してくれる個人用 Web アプリです。
 
-First, run the development server:
+## スクリーンショット
+
+| 初期画面 | 登録後の一覧（強調表示・色分け） | 編集後 |
+|---|---|---|
+| ![初期画面](docs/screenshot-initial.png) | ![登録後の一覧](docs/screenshot-list.png) | ![編集後](docs/screenshot-edit.png) |
+
+## 機能
+
+- 名前・日付・種別（誕生日／記念日／その他）の登録
+- 今日からの残り日数が近い順への自動ソート
+- 残り7日以内の記念日を強調表示
+- 種別ごとの色分け表示（誕生日＝ピンク／記念日＝青／その他＝グレー）
+- 登録済み項目の編集・削除
+- データはブラウザの localStorage に保存（サーバー・DB・認証なし）
+
+## 技術スタック
+
+| 項目 | 内容 |
+|---|---|
+| 言語 | TypeScript |
+| フレームワーク | Next.js（App Router） |
+| スタイリング | Tailwind CSS |
+| データ保存 | ブラウザ localStorage |
+| デプロイ | Vercel |
+
+環境変数は不要です（外部APIキーや認証情報を一切使いません）。
+
+## 開発環境の起動
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`http://localhost:3000` で起動します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 公開 URL
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+（Vercel デプロイ完了後に追記）
