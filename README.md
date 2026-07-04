@@ -40,4 +40,4 @@ npm run dev
 
 ## 公開 URL
 
-（Vercel デプロイ完了後に追記）
+https://anniversary-reminder-six.vercel.app/
